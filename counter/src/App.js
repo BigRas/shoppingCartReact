@@ -12,6 +12,15 @@ class App extends Component {
       { id: 4, value: 2 }
     ]
   };
+
+  constructor() {
+    super();
+    console.log("App-constructor");
+  }
+  componentDidMount() {
+    console.log("App- Mounted");
+  }
+
   incrementHandler = counter => {
     const countersTemp = [...this.state.counters];
     const index = countersTemp.indexOf(counter);
@@ -33,6 +42,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("App- Rendered");
     return (
       <main className="container">
         <NavBar

@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import Counter from "./counter";
 class Counters extends Component {
+  //to see the life cylce of app
   componentDidMount() {
     console.log("Counters- Mounted");
   }
+  componentDidUpdate(prevProps, PrevState) {
+    console.log("prevProps", prevProps);
+    console.log("prevState", PrevState);
+  }
+
   render() {
     const { onReset, onDelete, onIncrement, counters } = this.props;
     console.log("Counters-Rendered");

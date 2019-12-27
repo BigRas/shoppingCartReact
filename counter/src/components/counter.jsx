@@ -4,7 +4,9 @@ class Counter extends Component {
   componentDidMount() {
     console.log("Counter- Mounted");
   }
-
+  componentWillUnmount() {
+    console.log("Counter-UnMount");
+  }
   render() {
     console.log("Counter- Rendered");
     return (
